@@ -7,7 +7,11 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
-app.use(cors());
+app.use(
+  cors({
+    orgin: "https://hilarious-blancmange-c06dc3.netlify.app",
+  })
+);
 app.use(express.json());
 
 mongoose
